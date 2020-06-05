@@ -1,0 +1,17 @@
+{
+  "SchemaVersion": 1,
+  "Name": "HLCore_LowPower",
+  "ComponentId": "25025D2C-66DA-4448-BAE1-AC26FCDD3627",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [ "0ne12345678" ],
+  "Capabilities": {
+    "AllowedConnections": [ "global.azure-devices-provisioning.net", "iotc-deadbeef-dead-beef-dead-beefdeadbeef.azure-devices.net" ],
+    "AllowedApplicationConnections": [ "6583cf17-d321-4d72-8283-0b7c5b56442b" ],
+    "Gpio": [ "$AVNET_MT3620_SK_USER_LED_RED", "$AVNET_MT3620_SK_USER_LED_GREEN", "$AVNET_MT3620_SK_USER_BUTTON_A", "$AVNET_MT3620_SK_USER_BUTTON_B", "$AVNET_MT3620_SK_USER_LED_BLUE" ],
+    "DeviceAuthentication": "deadbeef-dead-beef-dead-beefdeadbeef",
+    "SystemEventNotifications": true,
+    "MutableStorage": { "SizeKB": 8 },
+    "PowerControls": [ "ForcePowerDown", "ForceReboot" ]
+  },
+  "ApplicationType": "Default"
+}
