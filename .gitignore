@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/RealTimeApp/.vs
+/RealTimeApp/out/ARM-Debug
+/HighLevelApp/.vs
+/HighLevelApp/out/ARM-Debug

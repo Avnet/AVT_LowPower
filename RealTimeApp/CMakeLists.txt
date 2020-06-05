@@ -20,23 +20,23 @@ add_link_options(-specs=nano.specs -specs=nosys.specs)
 add_executable(${PROJECT_NAME} 
                main.c
                lsm6dso_reg.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_gpio.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_uart.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_dma.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_i2c.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_mbox.c
-               ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_mbox_shared_mem.c)
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_gpio.c
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_uart.c
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_dma.c
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_i2c.c
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_mbox.c
+               ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/src/os_hal_mbox_shared_mem.c)
 
 # Include Folders
 include_directories(${PROJECT_NAME} PUBLIC
                     ./)
 target_include_directories(${PROJECT_NAME} PUBLIC
-                           ../mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/inc
+                           ./mt3620_m4_software/MT3620_M4_Sample_Code/OS_HAL/inc
                            ./)
 
 # Libraries
 set(OSAI_FREERTOS 1)
-add_subdirectory(../mt3620_m4_software/MT3620_M4_Driver ../mt3620_m4_software/lib/MT3620_M4_Driver)
+add_subdirectory(./mt3620_m4_software/MT3620_M4_Driver ./mt3620_m4_software/lib/MT3620_M4_Driver)
 target_link_libraries(${PROJECT_NAME} MT3620_M4_Driver)
 
 # Linker, Image
